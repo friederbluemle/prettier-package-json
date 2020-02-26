@@ -52,8 +52,26 @@ module.exports = function sortFiles(packageJson) {
 
   const isPackageMain = (filepath) => filepath === main;
   const ignored = or(ALWAYS_INCLUDED, ALWAYS_EXCLUDED, isPackageMain);
+  const directoriesFirst = (a, b) => {
+    if (a.endsWith('/') && !b.endsWith('/')) {
+      return -1;
+    } else if (!a.endsWith('/') && b.endsWith('/')) {
+      return 1;
+    } else {
+      return a - b;
+    }
+  };
+  const exclusionsLast = (a, b) => {
+    if (a.startsWith('!') && !b.startsWith('!')) {
+      return 1;
+    } else if (!a.startsWith('!') && b.startsWith('!')) {
+      return -1;
+    } else {
+      return a - b;
+    }
+  };
 
-  const sortedAndFilteredFiles = files.filter(not(ignored)).sort();
+  const sortedAndFilteredFiles = files.filter(not(ignored)).sort().sort(directoriesFirst).sort(exclusionsLast);
 
   return sortedAndFilteredFiles.length > 0 ? { files: sortedAndFilteredFiles } : {};
 };

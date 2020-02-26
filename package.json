@@ -14,8 +14,8 @@
     "prettier-package-json": "./bin/prettier-package-json"
   },
   "files": [
-    "bin",
-    "src"
+    "bin/",
+    "src/"
   ],
   "scripts": {
     "test": "jest",
