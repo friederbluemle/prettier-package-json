@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "cross-spawn": "^7.0.1",
-    "jest": "^24.9.0"
+    "jest": "^25.1.0"
   },
   "keywords": [
     "cleanup",
