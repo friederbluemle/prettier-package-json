@@ -3,72 +3,36 @@ module.exports = Object.freeze({
   tabWidth: 2,
   expandUsers: false,
   keyOrder: [
-    /**
-     * Details
-     */
     '$schema',
-    'private',
     'name',
-    'description',
-    'license',
-    'author',
-    'maintainers',
-    'contributors',
-    'homepage',
-    'repository',
-    'bugs',
     'version',
-    'type',
-
-    /**
-     * Yarn specific
-     */
-    'workspaces',
-
-    /**
-     * Configuration
-     */
+    'private',
+    'description',
     'main',
-    'module',
     'browser',
-    'man',
-    'preferGlobal',
-    'bin',
-    'files',
-    'directories',
-    'scripts',
-    'config',
-    'sideEffects',
     'types',
-    'typings',
-
-    /**
-     * Dependencies
-     */
-    'optionalDependencies',
-    'dependencies',
-    'bundleDependencies',
-    'bundledDependencies',
-    'peerDependencies',
-    'devDependencies',
-
-    /**
-     * Used for npm search
-     */
+    'files',
+    'bin',
+    'scripts',
+    'repository',
     'keywords',
-
-    /**
-     * Constraints
-     */
+    'author',
+    'contributors',
+    'license',
+    'bugs',
+    'homepage',
+    'man',
+    'directories',
+    'config',
+    'dependencies',
+    'devDependencies',
+    'peerDependencies',
+    'bundledDependencies',
+    'optionalDependencies',
     'engines',
-    'engine-strict',
-    'engineStrict',
     'os',
     'cpu',
-
-    /**
-     * Package publishing configuration
-     */
-    'publishConfig'
+    'publishConfig',
+    'workspaces'
   ]
 });
